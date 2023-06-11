@@ -1,0 +1,11 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.body {
+  @include input();
+
+  max-width: unset;
+
+  min-height: 84px;
+  max-height: 400px;
+}

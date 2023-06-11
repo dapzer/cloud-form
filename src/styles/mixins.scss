@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@mixin input () {
+  width: 100%;
+  max-width: 400px;
+  background: $c-secondary;
+  padding: 12px;
+  border-radius: $s-border-radius;
+  border: 1px solid $c-black-16;
+
+  font-size: $fs-text;
+  font-weight: $fw-regular;
+  line-height: $lh-text;
+  color: $c-primary;
+
+  &::placeholder {
+    color: $c-black-48;
+  }
+
+  &:disabled {
+    background: $c-black-04;
+    color: $c-black-48;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
