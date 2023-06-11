@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: $s-indent;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+  max-width: $s-container;
+  background-color: $c-secondary;
+  border-radius: 12px 12px 0 0;
+  padding: 24px 25px;
+  margin: 0 auto;
+}
