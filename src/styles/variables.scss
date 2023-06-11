@@ -1,0 +1,41 @@
+// Colors
+
+$c-text: #9ca8b1;
+$c-background: #F4F4F5;
+$c-primary: #333333;
+$c-secondary: #FFFFFF;
+$c-highlight: #5558FA;
+$c-accent: #A6A6A6;
+$c-black-04: rgba(0, 0, 0, 0.04);
+$c-black-08: rgba(0, 0, 0, 0.08);
+$c-black-16: rgba(0, 0, 0, 0.16);
+
+// Font Sizes
+
+$fs-heading: 1.25em;
+$fs-text: 0.875em;
+$fs-text-2: 0.75em;
+$fs-label: 0.875em;
+
+// Font Weights
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// Sizes
+
+$s-indent: 24px;
+$s-container: 900 + ($s-indent * 2);
+$s-header-height: 52px;
+$s-border-radius: 4px;
+
+// Breakpoints
+
+$bp-xl: 1440px;
+$bp-lg: 1250px;
+$bp-slg: 825px;
+$bp-md: 700px;
+$bp-sm: 400px;
