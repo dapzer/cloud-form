@@ -1,0 +1,32 @@
+@import "@/styles/variables.scss";
+
+.title {
+  color: $c-primary;
+  font-size: $fs-heading;
+  font-weight: $fw-semibold;
+  line-height: $lh-heading;
+}
+
+.text {
+  color: $c-primary;
+  font-size: $fs-text;
+  font-weight: $fw-regular;
+  line-height: $lh-text;
+}
+
+.textSmall {
+  color: $c-black-48;
+  font-size: $fs-text-2;
+  font-weight: $fw-regular;
+  line-height: $lh-text-2;
+}
+
+
+.link {
+  color: $c-highlight;
+  font-size: $fs-text-2;
+  font-weight: $fw-regular;
+  line-height: $lh-text-2;
+  text-decoration: none;
+  cursor: pointer;
+}
