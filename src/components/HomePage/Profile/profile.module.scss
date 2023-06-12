@@ -1,0 +1,47 @@
+@import "@/styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $c-black-08;
+  border: none;
+  margin: 24px 0;
+}
+
+.initials {
+  background-color: $c-blue--100;
+
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  & > div {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+}

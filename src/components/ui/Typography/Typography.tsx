@@ -9,7 +9,7 @@ type PolymorphicProps<Element extends React.ElementType, Props> = Props &
 
 interface TypographyProps {
   className?: string;
-  variant?: "text" | "title" | "link" | "textSmall";
+  variant?: "text" | "title" | "link" | "textSmall" | 'bigTitle';
 }
 
 export const Typography = <Element extends React.ElementType = React.ElementType>(props: PolymorphicProps<Element, TypographyProps>) => {
@@ -22,6 +22,7 @@ export const Typography = <Element extends React.ElementType = React.ElementType
         [styles.title]: variant == "title",
         [styles.textSmall]: variant == "textSmall",
         [styles.link]: variant == "link",
+        [styles.bigTitle]: variant == "bigTitle",
         [className as string]: className,
       })}
       {...rest}

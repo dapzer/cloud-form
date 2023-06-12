@@ -10,9 +10,12 @@ $c-black-04: rgba(0, 0, 0, 0.04);
 $c-black-08: rgba(0, 0, 0, 0.08);
 $c-black-16: rgba(0, 0, 0, 0.16);
 $c-black-48: rgba(0, 0, 0, 0.48);
+$c-gray-100: #212830;
+$c-blue--100: #D5E4F7;
 
 // Font Sizes
 
+$fs-big-heading: 2.5em;
 $fs-heading: 1.25em;
 $fs-text: 0.875em;
 $fs-text-2: 0.75em;
@@ -26,8 +29,14 @@ $fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
 
+// Font Family
+
+$ff-sb-interface: "SB Sans Interface", sans-serif;
+$ff-sb-text: "SB Sans Text", serif;
+
 // Line Heights
 
+$lh-big-heading: 52px;
 $lh-heading: 26px;
 $lh-text: 20px;
 $lh-text-2: 16px;

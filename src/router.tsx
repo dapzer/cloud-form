@@ -1,7 +1,6 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage } from "@/index.tsx";
 import { Layout } from "@/components/Layout";
+import { HomePage } from "@/pages/HomePage";
 
 interface RouterProps {
 }
@@ -9,10 +8,6 @@ interface RouterProps {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
-  },
-  {
-    path: "/registration",
     element: <HomePage/>,
   },
 ]);

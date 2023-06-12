@@ -1,10 +1,9 @@
-@import url("//db.onlinewebfonts.com/c/37086b994764dba84b2ee0f1083bfeed?family=SB+Sans+Interface");
 @import "reset.scss";
 @import "variables.scss";
 
 html,
 body {
-  font-family: "SB Sans Interface", sans-serif;
+  font-family: $ff-sb-interface;
   font-size: 16px;
 }
 

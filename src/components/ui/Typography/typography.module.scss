@@ -30,3 +30,11 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.bigTitle {
+  color: $c-gray-100;
+  font-size: $fs-big-heading;
+  font-weight: $fw-regular;
+  line-height: $lh-big-heading;
+  font-family: $ff-sb-text;
+}
