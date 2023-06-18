@@ -55,8 +55,6 @@ export const ProfileDescriptionFormPage = (props: ProfileDescriptionFormPageProp
       {currentStep === 1 && <ProfileDescriptionFormFirstStep saveFormFields={saveFormFields} handleNextStep={handleNextStep} handlePrevStep={exitToMainPage} />}
       {currentStep === 2 && <ProfileDescriptionFormSecondStep saveFormFields={saveFormFields} handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />}
       {currentStep === 3 && <ProfileDescriptionFormThirdStep saveFormFields={saveFormFields} handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />}
-      <Button onClick={() => setCurrentStep( currentStep - 1)}>-</Button>
-      <Button onClick={() => setCurrentStep( currentStep + 1)}>+</Button>
     </Paper>
   );
 };
