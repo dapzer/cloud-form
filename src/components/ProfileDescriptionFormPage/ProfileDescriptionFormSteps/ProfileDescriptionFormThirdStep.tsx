@@ -20,6 +20,8 @@ export const ProfileDescriptionFormThirdStep = (props: ProfileDescriptionFormSte
   const store = useProfileDescriptionFormStore(state => state);
   const [isSuccessSended, setIsSuccessSended] = useState(false);
   const [showSendedModal, setShowSendedModal] = useState(false);
+  const [aboutLength, setAboutLength] = useState(0);
+
   const {
     register,
     handleSubmit,
@@ -54,12 +56,15 @@ export const ProfileDescriptionFormThirdStep = (props: ProfileDescriptionFormSte
     navigate("/");
   };
 
+  const myFieldLength = getValues("about").length;
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
 
       <FormFields>
         <Textarea id="field-about" label="About" placeholder="Placeholder" {...register("about")}
-                  error={errors.about?.message} />
+                  error={errors.about?.message} showCurrentLength currentLength={aboutLength}
+                  onChange={(event) => setAboutLength(event.target.value.trim().length)} />
       </FormFields>
 
       {showSendedModal && (

@@ -17,5 +17,5 @@ export const profileDescriptionSecondStepSchema = yup.object().shape({
 })
 
 export const profileDescriptionThirdStepSchema = yup.object().shape({
-  about: yup.string().max(200, "Максимум 200 символов").min(3, "Минимум 3 символа").max(200, "Максимум 200 символов").required("About is required"),
+  about: yup.string().trim().max(200, "Максимум 200 символов").min(3, "Минимум 3 символа").max(200, "Максимум 200 символов").required("About is required"),
 })
