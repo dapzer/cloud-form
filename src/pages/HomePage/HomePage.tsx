@@ -14,7 +14,7 @@ export const HomePage = (props: HomePageProps) => {
     <Paper>
       <Profile />
 
-      <Link to={'/form'}>
+      <Link to={'/profile-description-form'}>
         <Button className={styles.startBtn} id={'button-start'}>
           Начать
         </Button>

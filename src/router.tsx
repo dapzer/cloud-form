@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { HomePage } from "@/pages/HomePage";
-import { FormPage } from "@/pages/FormPage";
+import { ProfileDescriptionFormPage } from "@/pages/ProfileDescriptionFormPage";
 
 interface RouterProps {
 }
@@ -12,8 +12,8 @@ const router = createBrowserRouter([
     element: <HomePage/>,
   },
   {
-    path: "/form",
-    element: <FormPage/>
+    path: "/profile-description-form",
+    element: <ProfileDescriptionFormPage/>
   }
 ]);
 

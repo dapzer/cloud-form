@@ -3,23 +3,23 @@ import { Input } from "@/components/ui/Input";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Select } from "@/components/ui/Select";
-import { firstStepSchema } from "@/lib/yuo/yupSchemas.ts";
-import { FormNavigationButtons } from "@/components/FormPage/FormNavigationButtons";
-import { useMultiStepFormStore } from "@/store/multiStepFormStore.ts";
-import { MultiStepForm } from "@/types/MultiStepForm.ts";
+import { profileDescriptionFirstStepSchema } from "@/lib/yuo/profileDescriptionScheme.ts";
+import { ProfileDescriptionFormNavigationButtons } from "@/components/ProfileDescriptionFormPage/ProfileDescriptionFormNavigationButtons";
+import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
+import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 import { useEffect } from "react";
 
-interface FormFirstStepProps {
-  saveFormFields: (form: Partial<MultiStepForm.RootObject>) => void;
+interface ProfileDescriptionFormFirstStepProps {
+  saveFormFields: (form: Partial<ProfileDescriptionFormTypes.RootObject>) => void;
   handleNextStep: () => void;
   handlePrevStep: () => void;
 }
 
-export const FormFirstStep = (props: FormFirstStepProps) => {
+export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormFirstStepProps) => {
   const { saveFormFields, handleNextStep, handlePrevStep } = props;
-  const store = useMultiStepFormStore(state => state);
-  const { register, handleSubmit, getValues, formState: { errors, dirtyFields } } = useForm<MultiStepForm.FirstStep>({
-    resolver: yupResolver(firstStepSchema),
+  const store = useProfileDescriptionFormStore(state => state);
+  const { register, handleSubmit, getValues, formState: { errors, dirtyFields } } = useForm<ProfileDescriptionFormTypes.FirstStep>({
+    resolver: yupResolver(profileDescriptionFirstStepSchema),
     defaultValues: {
       nickname: store.nickname,
       name: store.name,
@@ -56,8 +56,8 @@ export const FormFirstStep = (props: FormFirstStepProps) => {
           <option id="field-sex-option-woman " value="woman">woman</option>
         </Select>
 
-        <FormNavigationButtons submitOnClickNext
-                               prevButtonHandler={handlePrevStep} />
+        <ProfileDescriptionFormNavigationButtons submitOnClickNext
+                                                 prevButtonHandler={handlePrevStep} />
       </FormFields>
     </form>
   );

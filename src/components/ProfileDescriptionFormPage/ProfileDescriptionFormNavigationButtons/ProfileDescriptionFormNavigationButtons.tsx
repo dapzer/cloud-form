@@ -1,7 +1,7 @@
-import styles from "./form-navigation-buttons.module.scss";
+import styles from "./profile-description-form-navigation-buttons.module.scss";
 import { Button } from "@/components/ui/Button";
 
-interface NavigationButtonsProps {
+interface ProfileDescriptionFormNavigationButtonsProps {
   prevButtonHandler: () => void;
   nextButtonHandler?: () => void;
   prevButtonText?: string;
@@ -11,7 +11,7 @@ interface NavigationButtonsProps {
   submitOnClickNext?: boolean;
 }
 
-export const FormNavigationButtons = (props: NavigationButtonsProps) => {
+export const ProfileDescriptionFormNavigationButtons = (props: ProfileDescriptionFormNavigationButtonsProps) => {
   const {
     prevButtonHandler,
     nextButtonHandler,

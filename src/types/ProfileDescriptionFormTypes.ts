@@ -1,4 +1,4 @@
-export namespace MultiStepForm {
+export namespace ProfileDescriptionFormTypes {
   export interface FirstStep {
     nickname: string;
     name: string;
