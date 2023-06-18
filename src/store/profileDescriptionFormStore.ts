@@ -3,6 +3,8 @@ import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
 const initialState: ProfileDescriptionFormTypes.RootObject = {
+  phone: "9605806041",
+  email: "danilavoronkov2002@gmail.com",
   nickname: "",
   name: "",
   sername: "",

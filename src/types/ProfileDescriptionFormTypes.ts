@@ -1,4 +1,9 @@
 export namespace ProfileDescriptionFormTypes {
+ export interface Contacts {
+   phone: string;
+   email: string;
+ }
+
   export interface FirstStep {
     nickname: string;
     name: string;
@@ -16,5 +21,5 @@ export namespace ProfileDescriptionFormTypes {
     about: string;
   }
 
-  export type RootObject = FirstStep & SecondStep & ThirdStep;
+  export type RootObject = FirstStep & SecondStep & ThirdStep & Contacts;
 }

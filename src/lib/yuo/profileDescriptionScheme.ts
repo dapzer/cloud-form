@@ -1,6 +1,11 @@
 import * as yup from "yup";
 import { RegexpList } from "@/utils/regexpList.ts";
 
+export const profileDescriptionContactsSchema = yup.object().shape({
+  phone: yup.string().matches(RegexpList.onlyNumbers, "Только цифры").max(10, "Максимум 11 символов").min(10, "Минимум 11 символов").required("Phone is required"),
+  email: yup.string().email("Некорректный email").required("Email is required"),
+})
+
 export const profileDescriptionFirstStepSchema = yup.object().shape({
   nickname: yup.string().matches(RegexpList.onlyLettersAndNumbers, "Только буквы и цифры").max(30, "Максимум 30 символов").min(3, "Минимум 3 символа").required("Nickname is required"),
   name: yup.string().matches(RegexpList.onlyLetters, "Только буквы").max(50, "Максимум 50 символов").min(3, "Минимум 3 символа").required("Name is required"),
