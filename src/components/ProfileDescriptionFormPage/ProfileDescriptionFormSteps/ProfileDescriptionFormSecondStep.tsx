@@ -15,6 +15,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Typography } from "@/components/ui/Typography";
 import { Button } from "@/components/ui/Button";
 import { PlusIcon, TrashIcon } from "@/components/ui/Icons";
+import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 
 const checkboxList = [
   {
@@ -55,7 +56,7 @@ export const ProfileDescriptionFormSecondStep = (props: ProfileDescriptionFormSt
     getValues,
     control,
     formState: { errors },
-  } = useForm({
+  } = useForm<ProfileDescriptionFormTypes.SecondStep>({
     resolver: yupResolver(profileDescriptionSecondStepSchema),
     defaultValues: {
       advantages: store.advantages,

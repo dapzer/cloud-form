@@ -17,7 +17,7 @@ export const profileDescriptionSecondStepSchema = yup.object().shape({
   advantages: yup.array().of(yup.object().shape({
     value: yup.string().matches(RegexpList.onlyLettersWithSpaces, "Только буквы и пробелы").max(50, "Максимум 50 символов").min(3, "Минимум 3 символа").required("Advantages is required")
   })),
-  checkbox: yup.array().min(1, "Checkbox is required").required("Checkbox is required"),
+  checkbox: yup.array().min(1, "Checkbox is required").of(yup.number()).required("Checkbox is required"),
   radio: yup.string().required("Radio is required"),
 })
 

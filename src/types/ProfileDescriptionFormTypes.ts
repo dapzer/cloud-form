@@ -14,7 +14,7 @@ export namespace ProfileDescriptionFormTypes {
   export interface SecondStep {
     advantages: { value: string }[];
     checkbox: number[];
-    radio: string | undefined;
+    radio: string;
   }
 
   export interface ThirdStep {

@@ -12,14 +12,14 @@ const initialState: ProfileDescriptionFormTypes.RootObject = {
   about: "",
   advantages: Array(3).fill({ value: "" }),
   checkbox: [],
-  radio: undefined,
+  radio: "",
 };
 
 interface ProfileDescriptionFormStore extends ProfileDescriptionFormTypes.RootObject {
   updateField: (field: keyof ProfileDescriptionFormTypes.RootObject, value: string) => void;
   updateMultipleFields: (fields: Partial<ProfileDescriptionFormTypes.RootObject>) => void;
   sendForm: () => Promise<void>;
-  reset: () => void
+  reset: () => void;
 }
 
 export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore>()(devtools((setState, getState, store) => ({
@@ -31,7 +31,7 @@ export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore
 
   updateMultipleFields: (fields: Partial<ProfileDescriptionFormTypes.RootObject>) => {
     setState((state) => ({ ...state, ...fields }), false, "form/profile-description/updateMultipleFields");
-    },
+  },
 
   sendForm: async () => {
     try {
@@ -53,7 +53,7 @@ export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore
       });
       return response.json();
     } catch (e) {
-      throw new Error(e as string)
+      throw new Error(e as string);
     }
   },
 

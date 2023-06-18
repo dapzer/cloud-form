@@ -18,7 +18,7 @@ interface ProfileProps {
 export const Profile = (props: ProfileProps) => {
   const store = useProfileDescriptionFormStore();
 
-  const { handleSubmit, register, setValue, getValues, formState: { errors } } = useForm({
+  const { handleSubmit, register, setValue, getValues, formState: { errors } } = useForm<ProfileDescriptionFormTypes.Contacts>({
     resolver: yupResolver(profileDescriptionContactsSchema),
     defaultValues: {
       phone: store.phone,

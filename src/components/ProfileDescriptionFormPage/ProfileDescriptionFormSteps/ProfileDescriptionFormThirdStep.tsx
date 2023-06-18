@@ -13,6 +13,7 @@ import { profileDescriptionThirdStepSchema } from "@/lib/yuo/profileDescriptionS
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RequestStatusModal } from "@/components/ui/RequestStatusModal";
 import { useNavigate } from "react-router-dom";
+import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 
 export const ProfileDescriptionFormThirdStep = (props: ProfileDescriptionFormStepProps) => {
   const { saveFormFields, handleNextStep, handlePrevStep } = props;
@@ -27,7 +28,7 @@ export const ProfileDescriptionFormThirdStep = (props: ProfileDescriptionFormSte
     handleSubmit,
     getValues,
     formState: { errors },
-  } = useForm({
+  } = useForm<ProfileDescriptionFormTypes.ThirdStep>({
     resolver: yupResolver(profileDescriptionThirdStepSchema),
     defaultValues: {
       about: store.about,
