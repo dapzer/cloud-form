@@ -54,7 +54,7 @@ export const ProfileDescriptionFormSecondStep = (props: ProfileDescriptionFormSt
     handleSubmit,
     getValues,
     control,
-    formState: { errors, dirtyFields },
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(profileDescriptionSecondStepSchema),
     defaultValues: {
@@ -142,7 +142,7 @@ export const ProfileDescriptionFormSecondStep = (props: ProfileDescriptionFormSt
           {radioList.map((el, index) => (
             <label key={index} className={styles.inputWrapper}>
               <Input id={`field-radio-group-option-${el.value}`} type="radio" defaultValue={el.value}
-                      {...register(`radio`)} />
+                     {...register(`radio`)} />
               <Typography as="p" variant="text">{el.label}</Typography>
             </label>
           ))}

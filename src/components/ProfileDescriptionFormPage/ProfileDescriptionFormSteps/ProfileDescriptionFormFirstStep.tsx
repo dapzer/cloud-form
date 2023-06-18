@@ -15,7 +15,7 @@ import {
 export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormStepProps) => {
   const { saveFormFields, handleNextStep, handlePrevStep } = props;
   const store = useProfileDescriptionFormStore(state => state);
-  const { register, handleSubmit, getValues, formState: { errors, dirtyFields } } = useForm<ProfileDescriptionFormTypes.FirstStep>({
+  const { register, handleSubmit, getValues, formState: { errors } } = useForm<ProfileDescriptionFormTypes.FirstStep>({
     resolver: yupResolver(profileDescriptionFirstStepSchema),
     defaultValues: {
       nickname: store.nickname,
@@ -31,9 +31,7 @@ export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormSte
 
   useEffect(() => {
     return () => {
-      if (dirtyFields) {
-        saveFormFields(getValues());
-      }
+      saveFormFields(getValues());
     };
   }, []);
 
@@ -53,9 +51,9 @@ export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormSte
           <option id="field-sex-option-woman " value="woman">woman</option>
         </Select>
 
-        <ProfileDescriptionFormNavigationButtons submitOnClickNext
-                                                 prevButtonHandler={handlePrevStep} />
       </FormFields>
+      <ProfileDescriptionFormNavigationButtons submitOnClickNext
+                                               prevButtonHandler={handlePrevStep} />
     </form>
   );
 };

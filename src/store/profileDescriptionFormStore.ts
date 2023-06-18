@@ -8,7 +8,7 @@ const initialState: ProfileDescriptionFormTypes.RootObject = {
   sername: "",
   sex: "",
   about: "",
-  advantages: Array(3).fill({value: ""}),
+  advantages: Array(3).fill({ value: "" }),
   checkbox: [],
   radio: undefined,
 };
@@ -16,6 +16,8 @@ const initialState: ProfileDescriptionFormTypes.RootObject = {
 interface ProfileDescriptionFormStore extends ProfileDescriptionFormTypes.RootObject {
   updateField: (field: keyof ProfileDescriptionFormTypes.RootObject, value: string) => void;
   updateMultipleFields: (fields: Partial<ProfileDescriptionFormTypes.RootObject>) => void;
+  sendForm: () => Promise<void>;
+  reset: () => void
 }
 
 export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore>()(devtools((setState, getState, store) => ({
@@ -27,5 +29,33 @@ export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore
 
   updateMultipleFields: (fields: Partial<ProfileDescriptionFormTypes.RootObject>) => {
     setState((state) => ({ ...state, ...fields }), false, "form/profile-description/updateMultipleFields");
+    },
+
+  sendForm: async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/bootcamp/frontend`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nickname: getState().nickname,
+          name: getState().name,
+          sername: getState().sername,
+          sex: getState().sex,
+          about: getState().about,
+          advantages: getState().advantages.map((el) => el.value),
+          checkbox: getState().checkbox,
+          radio: Number(getState().radio),
+        }),
+      });
+      return response.json();
+    } catch (e) {
+      throw new Error(e as string)
+    }
+  },
+
+  reset: () => {
+    setState(initialState, false, "form/profile-description/reset");
   },
 }), { name: "form/profile-description" }));

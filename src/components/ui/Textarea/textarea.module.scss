@@ -4,6 +4,8 @@
 .body {
   @include input();
 
+  resize: vertical;
+
   max-width: unset;
 
   min-height: 84px;

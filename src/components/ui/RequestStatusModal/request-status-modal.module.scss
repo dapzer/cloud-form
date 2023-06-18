@@ -1,0 +1,26 @@
+@import "@/styles/variables";
+
+.statusIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 26px auto;
+  background: $c-red-15;
+
+  &Success {
+    background: $c-green-15;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &Success {
+      justify-content: center;
+  }
+}
