@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <HomePage/>,
   },
   {
-    path: "/profile-description-form",
+    path: "/create",
     element: <ProfileDescriptionFormPage/>
   }
 ]);
