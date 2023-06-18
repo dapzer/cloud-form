@@ -8,14 +8,11 @@ import { ProfileDescriptionFormNavigationButtons } from "@/components/ProfileDes
 import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
 import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 import { useEffect } from "react";
+import {
+  ProfileDescriptionFormStepProps
+} from "@/components/ProfileDescriptionFormPage/ProfileDescriptionFormSteps/ProfileDescriptionFormStepProps.ts";
 
-interface ProfileDescriptionFormFirstStepProps {
-  saveFormFields: (form: Partial<ProfileDescriptionFormTypes.RootObject>) => void;
-  handleNextStep: () => void;
-  handlePrevStep: () => void;
-}
-
-export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormFirstStepProps) => {
+export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormStepProps) => {
   const { saveFormFields, handleNextStep, handlePrevStep } = props;
   const store = useProfileDescriptionFormStore(state => state);
   const { register, handleSubmit, getValues, formState: { errors, dirtyFields } } = useForm<ProfileDescriptionFormTypes.FirstStep>({
@@ -43,7 +40,7 @@ export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormFir
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormFields>
-        <Input id="field-nickname" label="Nickname" placeholder="Placeholder"
+        <Input id="field-nickname" label="Nickname" placeholder="Placeho7lder"
                error={errors.nickname?.message} {...register("nickname")} />
         <Input id="field-name" label="Name" placeholder="Placeholder"
                error={errors.name?.message} {...register("name")} />
@@ -51,7 +48,7 @@ export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormFir
                error={errors.sername?.message} {...register("sername")} />
         <Select id="field-sex" placeholder="Не выбрано" label="Sex"
                 error={errors.sex?.message} {...register("sex")}>
-          <option value="">Не выбрано</option>
+          <option value="" hidden>Не выбрано</option>
           <option id="field-sex-option-man" value="man">man</option>
           <option id="field-sex-option-woman " value="woman">woman</option>
         </Select>

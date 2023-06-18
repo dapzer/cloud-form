@@ -8,9 +8,9 @@ const initialState: ProfileDescriptionFormTypes.RootObject = {
   sername: "",
   sex: "",
   about: "",
-  advantages: Array(3).fill(""),
-  checkbox: null,
-  radio: null,
+  advantages: Array(3).fill({value: ""}),
+  checkbox: [],
+  radio: undefined,
 };
 
 interface ProfileDescriptionFormStore extends ProfileDescriptionFormTypes.RootObject {

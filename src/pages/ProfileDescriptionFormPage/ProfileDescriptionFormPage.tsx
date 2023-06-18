@@ -6,6 +6,9 @@ import { ProfileDescriptionFormFirstStep } from "@/components/ProfileDescription
 import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
 import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 import { FormProgressBar } from "@/components/ui/FormProgressBar";
+import {
+  ProfileDescriptionFormSecondStep
+} from "@/components/ProfileDescriptionFormPage/ProfileDescriptionFormSteps/ProfileDescriptionFormSecondStep.tsx";
 
 interface ProfileDescriptionFormPageProps {
 
@@ -34,7 +37,7 @@ export const ProfileDescriptionFormPage = (props: ProfileDescriptionFormPageProp
       </div>
 
       {currentStep === 1 && <ProfileDescriptionFormFirstStep saveFormFields={saveFormFields} handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />}
-
+      {currentStep === 2 && <ProfileDescriptionFormSecondStep saveFormFields={saveFormFields} handleNextStep={handleNextStep} handlePrevStep={handlePrevStep} />}
       <Button onClick={() => setCurrentStep( currentStep - 1)}>-</Button>
       <Button onClick={() => setCurrentStep( currentStep + 1)}>+</Button>
     </Paper>

@@ -1,5 +1,7 @@
- export const RegexpList = {
-   onlyLetters: /^[a-zA-Z]/,
-   onlyNumbers: /^[0-9]/,
-   onlyLettersAndNumbers: /^[a-zA-Z0-9]/,
- }
+export const RegexpList = {
+  onlyLetters: /^[a-zA-Zа-яА-Я]/,
+  onlyNumbers: /^[0-9]/,
+  onlyLettersAndNumbers: /^[a-zA-Zа-яА-Я0-9]/,
+  onlyLettersAndNumbersAndSymbolsWithoutSpace: /^[a-zA-Zа-яА-Я0-9!@#$%^&*()_+{}|:"<>?,./~`-]/,
+  onlyLettersWithSpaces: /^[a-zA-Zа-яА-Я\s]/,
+};

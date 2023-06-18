@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./button.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline";
+  variant?: "primary" | "outline" | "clear";
 }
 
 export const Button = (props: ButtonProps) => {
@@ -16,6 +16,7 @@ export const Button = (props: ButtonProps) => {
         [className as string]: className,
         [styles.primary]: variant === "primary",
         [styles.outline]: variant === "outline",
+        [styles.clear]: variant === "clear",
       })}
       {...rest} />
   );

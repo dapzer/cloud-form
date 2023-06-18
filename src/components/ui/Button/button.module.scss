@@ -21,3 +21,9 @@
   border: 1.5px solid $c-highlight;
   padding: calc(12px - 1.5px) calc(16px - 1.5px);
 }
+
+.clear {
+  background-color: unset;
+  border-color: transparent;
+  padding: 0  ;
+}
