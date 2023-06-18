@@ -153,11 +153,11 @@ export const ProfileDescriptionFormSecondStep = (props: ProfileDescriptionFormSt
             </Typography>
           )}
         </div>
-
-        <ProfileDescriptionFormNavigationButtons submitOnClickNext
-                                                 prevButtonText={"Back"}
-                                                 prevButtonHandler={handlePrevStep} />
       </FormFields>
+
+      <ProfileDescriptionFormNavigationButtons submitOnClickNext
+                                               prevButtonText={"Back"}
+                                               prevButtonHandler={handlePrevStep} />
     </form>
   );
 };
