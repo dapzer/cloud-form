@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 interface NavigationButtonsProps {
   prevButtonHandler: () => void;
-  nextButtonHandler: () => void;
+  nextButtonHandler?: () => void;
   prevButtonText?: string;
   nextButtonText?: string;
   prevButtonId?: string;
