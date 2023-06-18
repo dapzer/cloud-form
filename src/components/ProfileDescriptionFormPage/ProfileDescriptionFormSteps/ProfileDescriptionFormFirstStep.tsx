@@ -38,7 +38,7 @@ export const ProfileDescriptionFormFirstStep = (props: ProfileDescriptionFormSte
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormFields>
-        <Input id="field-nickname" label="Nickname" placeholder="Placeho7lder"
+        <Input id="field-nickname" label="Nickname" placeholder="Placeholder"
                error={errors.nickname?.message} {...register("nickname")} />
         <Input id="field-name" label="Name" placeholder="Placeholder"
                error={errors.name?.message} {...register("name")} />
