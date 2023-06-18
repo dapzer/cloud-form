@@ -41,6 +41,8 @@ export const useProfileDescriptionFormStore = create<ProfileDescriptionFormStore
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          phone: getState().phone,
+          email: getState().email,
           nickname: getState().nickname,
           name: getState().name,
           sername: getState().sername,
