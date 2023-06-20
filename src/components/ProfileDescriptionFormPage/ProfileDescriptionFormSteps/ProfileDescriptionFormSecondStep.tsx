@@ -10,7 +10,7 @@ import {
 } from "@/components/ProfileDescriptionFormPage/ProfileDescriptionFormNavigationButtons";
 import styles from "./profile-description-form-steps.module.scss";
 import { Input } from "@/components/ui/Input";
-import { profileDescriptionSecondStepSchema } from "@/lib/yuo/profileDescriptionScheme.ts";
+import { profileDescriptionSecondStepSchema } from "@/lib/yup/profileDescriptionScheme.ts";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Typography } from "@/components/ui/Typography";
 import { Button } from "@/components/ui/Button";

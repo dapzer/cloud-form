@@ -9,7 +9,7 @@ import { FormFields } from "@/components/ui/FormFields";
 import { Textarea } from "@/components/ui/Textarea";
 import { useForm } from "react-hook-form";
 import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
-import { profileDescriptionThirdStepSchema } from "@/lib/yuo/profileDescriptionScheme.ts";
+import { profileDescriptionThirdStepSchema } from "@/lib/yup/profileDescriptionScheme.ts";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RequestStatusModal } from "@/components/ui/RequestStatusModal";
 import { useNavigate } from "react-router-dom";

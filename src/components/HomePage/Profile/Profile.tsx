@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
 import MaskedInput from "react-text-mask";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { profileDescriptionContactsSchema } from "@/lib/yuo/profileDescriptionScheme.ts";
+import { profileDescriptionContactsSchema } from "@/lib/yup/profileDescriptionScheme.ts";
 import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
 
 interface ProfileProps {

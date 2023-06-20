@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/Input";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Select } from "@/components/ui/Select";
-import { profileDescriptionFirstStepSchema } from "@/lib/yuo/profileDescriptionScheme.ts";
+import { profileDescriptionFirstStepSchema } from "@/lib/yup/profileDescriptionScheme.ts";
 import { ProfileDescriptionFormNavigationButtons } from "@/components/ProfileDescriptionFormPage/ProfileDescriptionFormNavigationButtons";
 import { useProfileDescriptionFormStore } from "@/store/profileDescriptionFormStore.ts";
 import { ProfileDescriptionFormTypes } from "@/types/ProfileDescriptionFormTypes.ts";
